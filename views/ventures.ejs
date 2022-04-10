@@ -4,15 +4,15 @@
     <% for (var i = 0; i < ventures.length; i++) { %>
         <div class="col-md-4">
             <div class="card" style="height: 18rem;">
-                <img src="/" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title text-center"><%=ventures[i].name%></h5>
+                    <h6 class="card-subtitle mb-2 text-muted text-center"><%=ventures[i].category%></h6>
                     <div class="progress">
                         <div class="progress-bar" role="progressbar" style="width: <%=ventures[i].percentInvested%>%"></div>
                     </div>
-                    <h6 class="card-subtitle mb-2 text-muted text-center">$<%=ventures[i].moneyRaised%>/$<%=ventures[i].target%></h6>
+                    <h7 class="card-subtitle mb-2 text-muted text-center" style="padding-top: 8px;">$<%=ventures[i].moneyRaised%>/$<%=ventures[i].target%></h7>
                     <p class="card-text"><%=ventures[i].description.slice(0, 201)%>...</p>
-                    <a href="/venture/<%=ventures[i].id%>" class="btn btn-primary align-text-bottom">Learn More</a>
+                    <a href="/venture/<%=ventures[i].id%>" class="btn btn-primary">Learn More</a>
                 </div>
             </div>
         </div>

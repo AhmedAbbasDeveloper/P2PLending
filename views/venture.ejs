@@ -1,23 +1,25 @@
 <%- include("header") -%>
 
-<form class="row g-3" method="post">
-    <div class="card">
-        <img src="/" class="card-img-top">
-        <div class="card-body">
-            <h2 class="card-title text-center"><%=venture.name%></h5>
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: <%=venture.percentInvested%>%"></div>
-            </div>
-            <h4 class="card-subtitle mb-2 text-muted text-center">$<%=venture.moneyRaised%>/$<%=venture.target%></h6>
-            <p class="card-text"><%=venture.description%></p>
-            <div class="col-md-6">
-                <label for="investment" class="form-label">Investment</label>
-                <input id="investment" name="investmentAmount" type="number" class="form-control" placeholder="How much would you like to invest?" required>
-            </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Invest</button>
-            </div>
+<div class="card">
+    <div class="card-body">
+        <h2 class="card-title text-center"><%=venture.name%></h2>
+        <h4 class="card-subtitle mb-2 text-muted text-center"><%=venture.category%></h4>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: <%=venture.percentInvested%>%"></div>
         </div>
+        <h5 class="card-subtitle mb-2 text-muted text-center" style="padding-top: 8px;">$<%=venture.moneyRaised%>/$<%=venture.target%></h5>
+        <p class="card-text"><%=venture.description%></p>
+        
+    </div>
+    
+</div>
+<form class="row g-3" method="post">
+    <div class="col-md-6">
+        <label for="investment" class="form-label">Investment</label>
+        <input id="investment" name="investmentAmount" type="number" class="form-control" placeholder="How much would you like to invest?" required>
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Invest</button>
     </div>
 </form>
        
