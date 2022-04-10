@@ -1,0 +1,22 @@
+<%- include("header") -%>
+
+<div class="row g-3">
+    <% for (var i = 0; i < ventures.length; i++) { %>
+        <div class="col-md-4">
+            <div class="card" style="height: 18rem;">
+                <img src="/" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title text-center"><%=ventures[i].name%></h5>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: <%=ventures[i].percentInvested%>%"></div>
+                    </div>
+                    <h6 class="card-subtitle mb-2 text-muted text-center">$<%=ventures[i].moneyRaised%>/$<%=ventures[i].target%></h6>
+                    <p class="card-text"><%=ventures[i].description.slice(0, 201)%>...</p>
+                    <a href="/venture/<%=ventures[i].id%>" class="btn btn-primary align-text-bottom">Learn More</a>
+                </div>
+            </div>
+        </div>
+    <% } %>
+</div>
+        
+<%- include("footer") -%>

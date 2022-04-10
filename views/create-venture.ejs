@@ -1,0 +1,36 @@
+<%- include("header") -%>
+            
+<form class="row g-3" method="post">
+    <div class="col-md-6">
+        <label for="name" class="form-label">Name</label>
+        <input id="name" name="name" type="text" class="form-control" placeholder="What are you calling your venture?" required autofocus>
+    </div>
+    <div class="col-md-6">
+        <label for="category" class="form-label">Category</label>
+        <select id="category" name="category" class="form-select" required>
+            <option selected disabled>Choose...</option>
+            <option>Software</option>
+        </select>
+    </div>
+    <div class="col-md-6">
+        <label for="target" class="form-label">Fundraising Target</label>
+        <input id="target" name="target" type="number" class="form-control" placeholder="How much money are you trying to raise?" required>
+    </div>
+    <div class="col-md-6">
+        <label for="valuation" class="form-label">Valuation</label>
+        <input id="valuation" name="valuation" type="number" class="form-control" placeholder="What is your venture's valuation?" required>
+    </div>
+    <div class="col-12">
+        <label for="description" class="form-label">Description</label>
+        <textarea id="description" name="description" class="form-control" rows="3" placeholder="Describe your venture in detail. Convince people your venture in worth investing in." required></textarea>
+    </div>
+    <div class="col-12">
+        <label for="image" class="form-label">Upload an image showcasing your venture.</label>
+        <input id="image" name="image" type="file" class="form-control">
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+
+<%- include("footer") -%>
